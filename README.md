@@ -1,3 +1,3 @@
 # ARCHLINUX-IMAGE
 
-### My private archlinux image
+### My archlinux image
