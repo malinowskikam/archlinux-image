@@ -5,7 +5,9 @@ services:
     build:
       context: .
       args:
-        - 
+        - USERNAME=${USERNAME}
+        - LOCALE=${LOCALE}
+        - TIMEZONE=${TIMEZONE}
     container_name: "arch"
     ports:
       - 8022:22

@@ -2,7 +2,6 @@ FROM archlinux:latest
 
 ARG LOCALE=en_US.UTF-8
 ARG TIMEZONE=/usr/share/zoneinfo/Europe/Warsaw
-ARG HOSTNAME=arch
 ARG USERNAME=user
 
 # Upgrade and install basic tools
@@ -26,9 +25,6 @@ RUN hwclock --systohc
 RUN sed -i "s/#$LOCALE/$LOCALE/g" /etc/locale.gen
 RUN locale-gen
 RUN echo "LANG=$LOCALE" > /etc/locale.conf
-
-#Setting hostname
-RUN echo "$HOSTNAME" > /etc/hostname
 
 COPY entrypoint.sh /entrypoint.sh
 
